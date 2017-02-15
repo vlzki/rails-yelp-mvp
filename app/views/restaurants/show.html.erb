@@ -1,0 +1,10 @@
+
+<h1>Le restaurant est :</h1>
+<h5><%= @restaurant.name %></h5>
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+<p><%= @restaurant.category %></p>
+
+
+<%= link_to "update", edit_restaurant_path(@restaurant)%>
+<%= link_to "delete", restaurant_path(@restaurant), method: :delete %>
