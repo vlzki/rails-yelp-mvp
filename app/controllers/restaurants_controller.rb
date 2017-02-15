@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
 
-before_action :set_restaurant, only: [:edit, :show, :update, :destroy]
+before_action :set_restaurant, only: [:edit, :show] #:update, :destroy => admin
 
 
 def index
@@ -25,19 +25,19 @@ def show
 
 end
 
-def update
-  @restaurant.update(restaurant_params)
-  if @restaurant.save
-    redirect_to restaurants_path
-  else
-    render :new
-  end
-end
+# def update
+#   @restaurant.update(restaurant_params)
+#   if @restaurant.save
+#     redirect_to restaurants_path
+#   else
+#     render :new
+#   end
+# end
 
-def destroy
-  @restaurant.destroy
-  redirect_to restaurants_path
-end
+# def destroy
+#   @restaurant.destroy
+#   redirect_to restaurants_path
+# end
 
 
 
